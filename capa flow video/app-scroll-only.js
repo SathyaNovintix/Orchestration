@@ -205,11 +205,8 @@ const renderAllContent = () => {
           <div style="width:10px;height:10px;border-radius:50%;background:#ea580c"></div>
           Dispatching O1 CAPA Director Agent...
         </div>
-        <div class="slide-nav-buttons">
-          <button class="prev-slide-btn">← Previous</button>
-          <button class="next-slide-btn">Next →</button>
-        </div>
-      </div>
+        <button class="next-slide-btn">Next →</button>
+        <div class="slide-nav-buttons"><button class="prev-slide-btn">? Previous</button><button class="next-slide-btn">Next ?</button></div></div>
     </div>
 
     <!-- SECTION 1: O1 CAPA DIRECTOR -->
@@ -242,7 +239,7 @@ const renderAllContent = () => {
             </div>
           </div>
         </div>
-      <button class="next-slide-btn">Next ?</button></div>
+        <div class="slide-nav-buttons"><button class="prev-slide-btn">? Previous</button><button class="next-slide-btn">Next ?</button></div></div>
     </div>
 
     <!-- SECTION 2: O2 RISK ANALYSIS -->
@@ -354,7 +351,7 @@ const renderAllContent = () => {
           </div>
           <div class="agent-status completed">✓</div>
         </div>
-      <button class="next-slide-btn">Next ?</button></div>
+        <div class="slide-nav-buttons"><button class="prev-slide-btn">? Previous</button><button class="next-slide-btn">Next ?</button></div></div>
     </div>
 
     <!-- SECTION 3: HUMAN CHECKPOINT 1 -->
@@ -374,7 +371,7 @@ const renderAllContent = () => {
             <div class="human-description">Risk Analysis output under human review.<br>Verifying RPN values, regulatory flags, and AI reasoning<br>before proceeding to Root Cause Analysis.</div>
           </div>
         </div>
-      <button class="next-slide-btn">Next ?</button></div>
+        <div class="slide-nav-buttons"><button class="prev-slide-btn">? Previous</button><button class="next-slide-btn">Next ?</button></div></div>
     </div>
 
     <!-- SECTION 4: O3 RCA ORCHESTRATOR -->
@@ -410,7 +407,7 @@ const renderAllContent = () => {
             </div>
           </div>
         </div>
-      <button class="next-slide-btn">Next ?</button></div>
+        <div class="slide-nav-buttons"><button class="prev-slide-btn">? Previous</button><button class="next-slide-btn">Next ?</button></div></div>
     </div>
 
     <!-- SECTION 5: O4 WHY ANALYSIS -->
@@ -523,7 +520,7 @@ const renderAllContent = () => {
           <div style="font-size:11px;font-weight:800;color:#db2777;margin-bottom:8px;text-transform:uppercase">Iterative Loop</div>
           <div style="font-size:13px;color:#64748b">If RCA not identified, loops back to A8 for deeper questioning</div>
         </div>
-      <button class="next-slide-btn">Next ?</button></div>
+        <div class="slide-nav-buttons"><button class="prev-slide-btn">? Previous</button><button class="next-slide-btn">Next ?</button></div></div>
     </div>
 
     <!-- SECTION 6: O5 FISHBONE ANALYSIS -->
@@ -637,7 +634,7 @@ const renderAllContent = () => {
           <div style="font-size:11px;font-weight:800;color:#db2777;margin-bottom:8px;text-transform:uppercase">Iterative Process</div>
           <div style="font-size:13px;color:#64748b">O4 and O5 work together iteratively until root cause is identified</div>
         </div>
-      <button class="next-slide-btn">Next ?</button></div>
+        <div class="slide-nav-buttons"><button class="prev-slide-btn">? Previous</button><button class="next-slide-btn">Next ?</button></div></div>
     </div>
 
     <!-- SECTION 7: HUMAN CHECKPOINT 2 -->
@@ -657,7 +654,7 @@ const renderAllContent = () => {
             <div class="human-description">Root Cause Analysis output under human review.<br>Verifying identified root causes and evidence<br>before proceeding to Action Planning.</div>
           </div>
         </div>
-      <button class="next-slide-btn">Next ?</button></div>
+        <div class="slide-nav-buttons"><button class="prev-slide-btn">? Previous</button><button class="next-slide-btn">Next ?</button></div></div>
     </div>
 
     <!-- SECTION 8: A15 ACTION PLANNER -->
@@ -695,7 +692,7 @@ const renderAllContent = () => {
             </div>
           </div>
         </div>
-      <button class="next-slide-btn">Next ?</button></div>
+        <div class="slide-nav-buttons"><button class="prev-slide-btn">? Previous</button><button class="next-slide-btn">Next ?</button></div></div>
     </div>
 
     <!-- SECTION 9: A16 EFFECTIVENESS -->
