@@ -82,6 +82,26 @@ const goToSlide = (index) => {
   }
   
   updateStepDots(index);
+  updateNavButtons(index);
+};
+
+// Update navigation buttons state
+const updateNavButtons = (currentIndex) => {
+  const prevButtons = document.querySelectorAll('.prev-slide-btn');
+  const nextButtons = document.querySelectorAll('.next-slide-btn');
+  
+  prevButtons.forEach((btn, index) => {
+    if (index === currentIndex) {
+      btn.disabled = currentIndex === 0;
+      btn.style.display = currentIndex === 0 ? 'none' : 'inline-block';
+    }
+  });
+  
+  nextButtons.forEach((btn, index) => {
+    if (index === currentIndex) {
+      btn.style.display = currentIndex === CONFIG.TOTAL_SLIDES - 1 ? 'none' : 'inline-block';
+    }
+  });
 };
 
 // Update Status Bar
@@ -144,7 +164,13 @@ const startWorkflow = () => {
   
   // Setup next button click handlers
   setTimeout(() => {
+    const prevButtons = document.querySelectorAll('.prev-slide-btn');
     const nextButtons = document.querySelectorAll('.next-slide-btn');
+    
+    prevButtons.forEach((btn, index) => {
+      btn.addEventListener('click', () => goToSlide(index - 1));
+    });
+    
     nextButtons.forEach((btn, index) => {
       btn.addEventListener('click', () => goToSlide(index + 1));
     });

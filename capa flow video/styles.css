@@ -1275,3 +1275,39 @@ html, body {
 .next-slide-btn:active {
   transform: translateY(0);
 }
+
+/* Navigation buttons container */
+.slide-nav-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+/* Previous Slide Button */
+.prev-slide-btn {
+  background: linear-gradient(135deg, #64748b, #475569);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(100, 116, 139, 0.4);
+  transition: all 0.3s;
+}
+
+.prev-slide-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(100, 116, 139, 0.6);
+}
+
+.prev-slide-btn:active {
+  transform: translateY(0);
+}
+
+.prev-slide-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
