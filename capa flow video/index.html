@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAPA Workflow - Multi-Agent Orchestration</title>
+  <meta name="description" content="Professional CAPA workflow visualization with multi-agent orchestration system">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app-new.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <div class="header-logo">C</div>
+      <div class="header-info">
+        <div class="header-title">CAPA Workflow</div>
+        <div class="header-subtitle">Multi-Agent Orchestration System</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="step-dots" id="stepDots"></div>
+      <button class="btn btn-primary" id="runBtn">▶ Run Simulation</button>
+    </div>
+  </header>
+
+  <main class="showcase" id="showcase">
+    <div class="slide-container" id="slideContainer">
+      <div style="text-align:center;padding:64px 0;opacity:0.6">
+        <div style="font-size:64px;margin-bottom:24px">🎯</div>
+        <div style="font-size:24px;font-weight:700;color:#64748b;margin-bottom:12px">CAPA Workflow Ready</div>
+        <div style="font-size:15px;color:#94a3b8;margin-bottom:32px">Click "Run Simulation" to start the workflow</div>
+        <div style="font-size:13px;color:#cbd5e1">Scroll-based navigation: Scroll down for next slide, scroll up for previous slide</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="status-bar">
+    <div class="status-left">
+      <div class="status-indicator" id="statusIndicator"></div>
+      <div class="status-text" id="statusText">Ready to start</div>
+    </div>
+    <div class="status-right">
+      <div class="status-progress">
+        <div class="status-progress-fill" id="statusProgressFill"></div>
+      </div>
+      <div class="status-count" id="statusCount">0 / 12</div>
+    </div>
+  </footer>
+
+</body>
+</html>

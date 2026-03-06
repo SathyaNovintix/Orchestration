@@ -1,0 +1,18 @@
+{
+  "name": "capa-workflow",
+  "version": "1.0.0",
+  "description": "CAPA Multi-Agent Orchestration Workflow Visualization",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "start": "python -m http.server 8000"
+  },
+  "keywords": [
+    "capa",
+    "workflow",
+    "orchestration",
+    "multi-agent"
+  ],
+  "author": "",
+  "license": "MIT"
+}
