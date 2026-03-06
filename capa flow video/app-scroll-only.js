@@ -60,11 +60,11 @@ const updateStepDots = () => {
   
   let currentIndex = 0;
   sections.forEach((section, index) => {
-    const rect = section.getBoundingClientRect();
-    const showcaseRect = showcase.getBoundingClientRect();
-    const relativeTop = rect.top - showcaseRect.top;
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
     
-    if (relativeTop < viewportHeight / 2) {
+    // Check if this section is in view
+    if (scrollTop >= sectionTop - viewportHeight / 3) {
       currentIndex = index;
     }
   });
