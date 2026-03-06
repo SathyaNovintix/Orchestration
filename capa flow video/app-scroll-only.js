@@ -160,7 +160,7 @@ const renderAllContent = () => {
   
   container.innerHTML = `
     <!-- SECTION 0: COMPLAINT RECEIVED -->
-    <div class="workflow-section" style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px 0">
+    <div class="workflow-section" style="display:flex;align-items:center;justify-content:center;padding:32px 0">
       <div style="text-align:center;animation:slideInUp 0.5s ease-out">
         <div style="font-size:80px;margin-bottom:24px">⚠️</div>
         <div style="font-size:12px;font-weight:800;letter-spacing:0.15em;color:#ea580c;margin-bottom:12px;text-transform:uppercase">Incoming Event</div>
@@ -170,12 +170,11 @@ const renderAllContent = () => {
           <div style="width:10px;height:10px;border-radius:50%;background:#ea580c"></div>
           Dispatching O1 CAPA Director Agent...
         </div>
-        <div style="margin-top:40px;font-size:14px;color:#94a3b8">👇 Scroll down to continue</div>
       </div>
     </div>
 
     <!-- SECTION 1: O1 CAPA DIRECTOR -->
-    <div class="workflow-section" style="min-height:100vh;display:flex;align-items:center;padding:32px 0">
+    <div class="workflow-section" style="display:flex;align-items:center;padding:32px 0">
       <div style="width:100%">
         <div class="slide-header">
           <div class="slide-icon color-orange">🎯</div>
@@ -204,12 +203,11 @@ const renderAllContent = () => {
             </div>
           </div>
         </div>
-        <div style="margin-top:40px;text-align:center;font-size:14px;color:#94a3b8">👇 Scroll down to continue</div>
       </div>
     </div>
 
     <!-- SECTION 2: O2 RISK ANALYSIS -->
-    <div class="workflow-section" style="min-height:150vh;padding:32px 0">
+    <div class="workflow-section" style="padding:32px 0">
       <div class="slide-header">
         <div class="slide-icon color-purple">🔍</div>
         <div class="slide-info">
@@ -318,11 +316,10 @@ const renderAllContent = () => {
           <div class="agent-status completed">✓</div>
         </div>
       </div>
-      <div style="margin-top:40px;text-align:center;font-size:14px;color:#94a3b8">👇 Scroll down to continue</div>
     </div>
 
     <!-- SECTION 3: HUMAN CHECKPOINT 1 -->
-    <div class="workflow-section" style="min-height:100vh;display:flex;align-items:center;padding:32px 0">
+    <div class="workflow-section" style="display:flex;align-items:center;padding:32px 0">
       <div style="width:100%">
         <div class="slide-header">
           <div class="slide-icon color-purple">👤</div>
@@ -338,12 +335,11 @@ const renderAllContent = () => {
             <div class="human-description">Risk Analysis output under human review.<br>Verifying RPN values, regulatory flags, and AI reasoning<br>before proceeding to Root Cause Analysis.</div>
           </div>
         </div>
-        <div style="margin-top:40px;text-align:center;font-size:14px;color:#94a3b8">👇 Scroll down to continue</div>
       </div>
     </div>
 
     <!-- SECTION 4: O3 RCA ORCHESTRATOR -->
-    <div class="workflow-section" style="min-height:100vh;display:flex;align-items:center;padding:32px 0">
+    <div class="workflow-section" style="display:flex;align-items:center;padding:32px 0">
       <div style="width:100%">
         <div class="slide-header">
           <div class="slide-icon color-purple">🧬</div>
@@ -375,12 +371,11 @@ const renderAllContent = () => {
             </div>
           </div>
         </div>
-        <div style="margin-top:40px;text-align:center;font-size:14px;color:#94a3b8">👇 Scroll down to continue</div>
       </div>
     </div>
 
     <!-- SECTION 5: O4 WHY ANALYSIS -->
-    <div class="workflow-section" style="min-height:180vh;padding:32px 0">
+    <div class="workflow-section" style="padding:32px 0">
       <div class="slide-header">
         <div class="slide-icon color-pink">❓</div>
         <div class="slide-info">
@@ -490,11 +485,10 @@ const renderAllContent = () => {
           <div style="font-size:13px;color:#64748b">If RCA not identified, loops back to A8 for deeper questioning</div>
         </div>
       </div>
-      <div style="margin-top:40px;text-align:center;font-size:14px;color:#94a3b8">👇 Scroll down to continue</div>
     </div>
 
     <!-- SECTION 6: O5 FISHBONE ANALYSIS -->
-    <div class="workflow-section" style="min-height:180vh;padding:32px 0">
+    <div class="workflow-section" style="padding:32px 0">
       <div class="slide-header">
         <div class="slide-icon color-pink">🐟</div>
         <div class="slide-info">
@@ -605,11 +599,10 @@ const renderAllContent = () => {
           <div style="font-size:13px;color:#64748b">O4 and O5 work together iteratively until root cause is identified</div>
         </div>
       </div>
-      <div style="margin-top:40px;text-align:center;font-size:14px;color:#94a3b8">👇 Scroll down to continue</div>
     </div>
 
     <!-- SECTION 7: HUMAN CHECKPOINT 2 -->
-    <div class="workflow-section" style="min-height:100vh;display:flex;align-items:center;padding:32px 0">
+    <div class="workflow-section" style="display:flex;align-items:center;padding:32px 0">
       <div style="width:100%">
         <div class="slide-header">
           <div class="slide-icon color-purple">👤</div>
@@ -625,12 +618,11 @@ const renderAllContent = () => {
             <div class="human-description">Root Cause Analysis output under human review.<br>Verifying identified root causes and evidence<br>before proceeding to Action Planning.</div>
           </div>
         </div>
-        <div style="margin-top:40px;text-align:center;font-size:14px;color:#94a3b8">👇 Scroll down to continue</div>
       </div>
     </div>
 
     <!-- SECTION 8: A15 ACTION PLANNER -->
-    <div class="workflow-section" style="min-height:100vh;display:flex;align-items:center;padding:32px 0">
+    <div class="workflow-section" style="display:flex;align-items:center;padding:32px 0">
       <div style="width:100%">
         <div class="slide-header">
           <div class="slide-icon color-green">📋</div>
@@ -664,12 +656,11 @@ const renderAllContent = () => {
             </div>
           </div>
         </div>
-        <div style="margin-top:40px;text-align:center;font-size:14px;color:#94a3b8">👇 Scroll down to continue</div>
       </div>
     </div>
 
     <!-- SECTION 9: A16 EFFECTIVENESS -->
-    <div class="workflow-section" style="min-height:100vh;display:flex;align-items:center;padding:32px 0">
+    <div class="workflow-section" style="display:flex;align-items:center;padding:32px 0">
       <div style="width:100%">
         <div class="slide-header">
           <div class="slide-icon color-green">✓</div>
@@ -707,12 +698,11 @@ const renderAllContent = () => {
             </div>
           </div>
         </div>
-        <div style="margin-top:40px;text-align:center;font-size:14px;color:#94a3b8">👇 Scroll down to continue</div>
       </div>
     </div>
 
     <!-- SECTION 10: WORKFLOW COMPLETE -->
-    <div class="workflow-section" style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px 0">
+    <div class="workflow-section" style="display:flex;align-items:center;justify-content:center;padding:48px 0">
       <div style="text-align:center">
         <div style="font-size:96px;margin-bottom:24px">✓</div>
         <div style="font-size:12px;font-weight:800;letter-spacing:0.15em;color:#16a34a;margin-bottom:12px;text-transform:uppercase">Workflow Complete</div>
