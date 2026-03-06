@@ -205,8 +205,8 @@ const renderAllContent = () => {
           <div style="width:10px;height:10px;border-radius:50%;background:#ea580c"></div>
           Dispatching O1 CAPA Director Agent...
         </div>
-        <button class="next-slide-btn">Next →</button>
-        <div class="slide-nav-buttons"><button class="prev-slide-btn">? Previous</button><button class="next-slide-btn">Next ?</button></div></div>
+        <div class="slide-nav-buttons"><button class="prev-slide-btn">← Previous</button><button class="next-slide-btn">Next →</button></div>
+      </div>
     </div>
 
     <!-- SECTION 1: O1 CAPA DIRECTOR -->
@@ -734,7 +734,7 @@ const renderAllContent = () => {
             </div>
           </div>
         </div>
-      <button class="next-slide-btn">Next ?</button><button class="next-slide-btn">Next ?</button></div>
+      <button class="prev-slide-btn">? Previous</button><button class="next-slide-btn">Next ?</button></div>
     </div>
 
     <!-- SECTION 10: WORKFLOW COMPLETE -->
@@ -754,6 +754,7 @@ const renderAllContent = () => {
             <div style="font-size:11px;font-weight:700;color:#16a34a">Agents Executed</div>
           </div>
         </div>
+        <div class="slide-nav-buttons"><button class="prev-slide-btn">← Previous</button></div>
       </div>
     </div>
   `;
