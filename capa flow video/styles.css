@@ -1296,6 +1296,7 @@ html, body {
   cursor: pointer;
   box-shadow: 0 4px 16px rgba(100, 116, 139, 0.4);
   transition: all 0.3s;
+  margin-top: 32px;
 }
 
 .prev-slide-btn:hover {
