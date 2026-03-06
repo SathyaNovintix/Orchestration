@@ -49,26 +49,8 @@ const initializeStepDots = () => {
   }
 };
 
-// Update Step Dots based on scroll position
-const updateStepDots = () => {
-  const showcase = $('showcase');
-  if (!showcase) return;
-  
-  const sections = showcase.querySelectorAll('.workflow-section');
-  const scrollTop = showcase.scrollTop;
-  const viewportHeight = showcase.clientHeight;
-  
-  let currentIndex = 0;
-  sections.forEach((section, index) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    
-    // Check if this section is in view
-    if (scrollTop >= sectionTop - viewportHeight / 3) {
-      currentIndex = index;
-    }
-  });
-  
+// Update Step Dots
+const updateStepDots = (currentIndex) => {
   for (let i = 0; i < CONFIG.TOTAL_SLIDES; i++) {
     const dot = $(`dot_${i}`);
     if (!dot) continue;
@@ -79,7 +61,6 @@ const updateStepDots = () => {
   
   STATE.currentSlide = currentIndex;
   updateStatusBar(currentIndex);
-  updateNextButtons();
 };
 
 // Navigate to specific slide
@@ -90,19 +71,17 @@ const goToSlide = (index) => {
   if (!showcase) return;
   
   const sections = showcase.querySelectorAll('.workflow-section');
+  
+  // Hide all sections
+  sections.forEach(section => section.classList.remove('active'));
+  
+  // Show target section
   if (sections[index]) {
-    sections[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    sections[index].classList.add('active');
+    sections[index].scrollTop = 0; // Reset scroll position
   }
-};
-
-// Update next button visibility
-const updateNextButtons = () => {
-  const buttons = document.querySelectorAll('.next-slide-btn');
-  buttons.forEach((btn, index) => {
-    if (index === CONFIG.TOTAL_SLIDES - 1) {
-      btn.style.display = 'none'; // Hide on last slide
-    }
-  });
+  
+  updateStepDots(index);
 };
 
 // Update Status Bar
@@ -169,17 +148,15 @@ const startWorkflow = () => {
     nextButtons.forEach((btn, index) => {
       btn.addEventListener('click', () => goToSlide(index + 1));
     });
+    
+    // Show first slide
+    goToSlide(0);
   }, 100);
-  
-  updateStepDots();
   
   if (runBtn) {
     runBtn.disabled = false;
     runBtn.innerHTML = '↻ Restart';
-    runBtn.onclick = () => {
-      if (showcase) showcase.scrollTop = 0;
-      updateStepDots();
-    };
+    runBtn.onclick = () => goToSlide(0);
   }
   
   STATE.busy = false;
