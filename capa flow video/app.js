@@ -142,20 +142,14 @@ const setSlideContent = (html) => {
   const container = $('slideContainer');
   if (container) {
     container.innerHTML = html;
-    // Scroll to top when new slide loads
-    const showcase = $('showcase');
-    if (showcase) {
-      showcase.scrollTop = 0;
-    }
+    // Don't auto-scroll - let user control scrolling
   }
 };
 
-// Helper to scroll element into view smoothly
+// Helper to scroll element into view smoothly - DISABLED for user control
 const scrollToElement = (elementId) => {
-  const element = $(elementId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
+  // Disabled - let user scroll manually
+  return;
 };
 
 // Wait for user to scroll down to continue
@@ -298,8 +292,7 @@ const renderSlide = async (slideIndex) => {
   STATE.currentSlide = slideIndex;
   updateStepDots(slideIndex);
   
-  const showcase = $('showcase');
-  if (showcase) showcase.scrollTop = 0;
+  // Don't auto-scroll to top - let user control scrolling
   
   switch(slideIndex) {
     case 0:
